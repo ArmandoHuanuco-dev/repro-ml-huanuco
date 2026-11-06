@@ -10,11 +10,29 @@ RESULTS = ROOT / "results" / "results_summary.csv"       # zona results (gold): 
 
 TARGET = "ganancia_neta_mes"  # nombre de la variable objetivo
 TAREA = "regresion"           # "regresion" o "clasificacion"
-COLS_NUM = []                 # columnas numéricas que usará el modelo
-COLS_CAT = []                 # columnas categóricas que usará el modelo
+COLS_NUM = [                  # columnas numéricas que usará el modelo
+    "edad",
+    "horas_semana",
+    "anios_en_ocupacion",
+    "personas_en_negocio"
+]
+COLS_CAT = [                  # columnas categóricas que usará el modelo
+    "estado_civil",
+    "nivel_educativo",
+    "registro_sunat",
+    "subsector_ciiu",
+    "dominio",
+    "estrato",
+    "mes_encuesta",
+    "sexo_mujer",
+    "es_empleador",
+    "ayuda_familiar_no_remunerado",
+    "lleva_libros_contables",
+    "tiene_ocupacion_secundaria"
+]
 CODIGOS_FALTANTES = []        # códigos que significan "sin dato" (p. ej., 99, 9999)
 
-MODELO = "CAMBIAR"            # el algoritmo asignado: "lineal", "knn", "arbol", "rf" o "svm"
+MODELO = "rf"                 # el algoritmo asignado: "lineal", "knn", "arbol", "rf" o "svm"
 
 SEMILLA_PARTICION = 42        # fija: todos los integrantes usan la misma partición 80/20
 SEMILLAS = [0, 1, 2, 3, 42]   # semillas de la validación cruzada
