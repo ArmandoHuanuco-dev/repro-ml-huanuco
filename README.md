@@ -73,7 +73,11 @@ Ver `data/MANIFIESTO.md`.
 | Entorno exacto | El archivo `requirements.txt` fija las versiones exactas (`numpy==2.5.4`, `pandas==3.1.1`, `scikit-learn==1.9.1`, `mlflow==3.18.0`) probadas sobre Python 3.13 en Windows. |
 
 ## Prueba del extraño
-Pendiente de registro del enlace al Issue por un compañero de otro grupo (ver pestaña Issues del repositorio).
+* **Verificadores:** Alexander Yupanqui y Luis Simonetti (Compañeros de otro grupo).
+* **Evidencias (Issues):** 
+  * [Issue - Alexander Yupanqui](https://github.com/ArmandoHuanuco-dev/repro-ml-huanuco/issues)
+  * [Issue - Luis Simonetti](https://github.com/ArmandoHuanuco-dev/repro-ml-huanuco/issues)
+* **Resultado:** Reproducción exitosa al 100 %. Tras configurar `.gitattributes` (`*.csv -text`) para asegurar los saltos de línea `LF` en Windows, se verificó la coincidencia exacta de los hashes de la zona raw (`79cb9c9fcccd760795c3a28fdc8b35e3`) y processed (`5caa212fdfd858bb9a4f218d43c94d8d`), el resultado JSON de la semilla 42 (`mae_mean = 572.21792`) y el rendimiento consolidado de las 5 semillas (`MAE = 570.1482 ± 2.2152` para Random Forest frente a `631.0777 ± 0.1597` del baseline)[cite: 8, 9].
 
 ## Limitaciones
 * **Autorreporte e informalidad:** La variable objetivo `ganancia_neta_mes` proviene de declaración verbal en la ENAHO (el 95.7 % no lleva libros contables), estando sujeta a sesgo de memoria o subdeclaración.
